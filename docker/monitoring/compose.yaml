@@ -1,0 +1,56 @@
+services:
+  prometheus:
+    image: prom/prometheus:v3.2.1
+    container_name: prometheus
+    volumes:
+      - prometheus_data:/prometheus
+      - /opt/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - /opt/prometheus/alertrules.yml:/etc/prometheus/alertrules.yml
+    ports:
+      - '127.0.0.1:9090:9090'
+    command:
+      - '--storage.tsdb.path=/prometheus'
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    restart: always
+
+  alertmanager:
+    image: prom/alertmanager:v0.28.0
+    container_name: alertmanager
+    volumes:
+      - /opt/prometheus/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    ports:
+      - '127.0.0.1:9093:9093'
+    command:
+      - '--config.file=/etc/alertmanager/alertmanager.yml'
+    restart: always
+    depends_on:
+      - prometheus
+
+  influxdb2:
+    image: influxdb:2.7.11
+    container_name: influxdb2
+    volumes:
+      - influx_data:/var/lib/influxdb2
+      - influx_conf:/etc/influxdb2
+    ports:
+      - '8086:8086'
+    restart: always
+
+  grafana:
+    image: grafana/grafana-oss:11.3.4
+    container_name: grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+    ports:
+      - '127.0.0.1:3000:3000'
+    restart: always
+
+volumes:
+  prometheus_data:
+    driver: local
+  influx_data:
+    driver: local
+  influx_conf:
+    driver: local
+  grafana_data:
+    driver: local
