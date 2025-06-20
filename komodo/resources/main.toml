@@ -1,0 +1,10 @@
+[[resource_sync]]
+name = "homelab"
+tags = ["sync"]
+[resource_sync.config]
+repo = "jtcleek/homelab"
+git_account = "jtcleek"
+webhook_enabled = false
+resource_path = ["komodo/resources/main.toml"]
+managed = true
+match_tags = ["sync"]
