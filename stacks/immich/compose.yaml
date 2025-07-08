@@ -1,6 +1,6 @@
 services:
   immich-server:
-    image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION:-release}
+    image: ghcr.io/immich-app/immich-server:v1.135.3
     container_name: immich_server
     deploy:
       resources:
@@ -26,7 +26,7 @@ services:
     healthcheck:
       disable: false
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:${IMMICH_VERSION:-release}-cuda
+    image: ghcr.io/immich-app/immich-machine-learning:v1.135.3-cuda
     container_name: immich_machine_learning
     deploy:
       resources:
