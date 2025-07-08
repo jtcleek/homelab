@@ -2,11 +2,16 @@ services:
   babybuddy:
     image: lscr.io/linuxserver/babybuddy:2.7.1
     container_name: babybuddy
-    restart: always
     ports:
       - "127.0.0.1:8000:8000"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+      - CSRF_TRUSTED_ORIGINS=http://127.0.0.1:8000,https://babybuddy.cleek.xyz
     volumes:
       - data:/config
-    env_file: .env
+    restart: unless-stopped
 volumes:
   data:
+    driver: local
