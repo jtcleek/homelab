@@ -20,7 +20,7 @@
         "valkey"
       ],
       "matchFileNames": [
-        "stacks/immich/**"
+        "stacks/immich/compose.yaml"
       ],
       "enabled": false
     }
