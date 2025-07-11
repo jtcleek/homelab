@@ -14,7 +14,7 @@ services:
       RUST_LOG: info,atuin_server=debug
     command: server start
   postgresql:
-    image: postgres:14
+    image: postgres:17
     container_name: atuin-database
     restart: unless-stopped
     volumes: # Don't remove permanent storage for index database files!
