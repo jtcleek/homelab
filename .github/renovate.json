@@ -1,0 +1,39 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "dependencyDashboardApproval": true,
+  "labels": [
+    "renovate"
+  ],
+  "configMigration": true,
+  "prHourlyLimit": 0,
+  "pruneStaleBranches": true,
+  "packageRules": [
+    {
+      "description": "Automerge non-major updates",
+      "matchManagers": [
+        "docker-compose"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "Ignore dependencies in immich stack",
+      "matchManagers": [
+        "docker-compose"
+      ],
+      "matchFileNames": ["**/immich/compose.yaml"],
+      "matchPackageNames": [
+        "docker.io/valkey/valkey",
+        "ghcr.io/immich-app/postgres"
+      ],
+      "enabled": false
+    }
+  ]
+}
