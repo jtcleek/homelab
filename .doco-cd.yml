@@ -1,0 +1,7 @@
+---
+name: glance
+working_dir: docker/glance
+external_secrets:
+  GLANCE_DOMAIN: "arn:aws:secretsmanager:us-east-1:913105552974:secret:glance-jxmiOS/DOMAIN"
+  GLANCE_SPEEDTEST_URL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:glance-jxmiOS/SPEEDTEST_URL"
+  GLANCE_SPEEDTEST_API_TOKEN: "arn:aws:secretsmanager:us-east-1:913105552974:secret:glance-jxmiOS/SPEEDTEST_API_TOKEN"

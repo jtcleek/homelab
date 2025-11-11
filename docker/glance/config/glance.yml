@@ -1,0 +1,100 @@
+server:
+  assets-path: /app/assets
+pages:
+  - name: Home
+    # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
+    hide-desktop-navigation: true
+    columns:
+      - size: small
+        widgets:
+          - type: to-do
+
+          - $include: speedtest.yml
+
+          - type: releases
+            cache: 1d
+            # Without authentication the Github API allows for up to 60 requests per hour. You can create a
+            # read-only token from your Github account settings and use it here to increase the limit.
+            # token: ...
+            repositories:
+              - glanceapp/glance
+              - immich-app/immich
+              - moghtech/komodo
+              - babybuddy/babybuddy
+              - mealie-recipes/mealie
+              - atuinsh/atuin
+              - juanfont/headscale
+
+          - type: bookmarks
+            groups:
+              - links:
+                  - title: Alertmanager
+                    url: https://alertmanager.${DOMAIN}/#/alerts
+                  - title: Prometheus
+                    url: https://prometheus.${DOMAIN}/query
+                  - title: Grafana
+                    url: https://grafana.${DOMAIN}/
+              - links:
+                  - title: Komodo
+                    url: https://komodo.${DOMAIN}/
+                  - title: Proxmox
+                    url: https://pve.${DOMAIN}/
+                  - title: pfSense
+                    url: https://pfsense.${DOMAIN}/
+              - links:
+                  - title: IT-Tools
+                    url: https://tools.${DOMAIN}/
+
+      - size: full
+        widgets:
+          - type: videos
+            channels:
+              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+              - UCNDDoXx4v7waJsdFv3h3V2A # Police Pursuits
+              - UCHkYOD-3fZbuGhwsADBd9ZQ # Lawrence Systems
+              - UCofJu853kJKpkg4y5a-9YXg # Foresty Forest
+
+          - type: monitor
+            cache: 5m
+            title: Services
+            sites:
+              - title: Immich
+                url: https://immich.${DOMAIN}/auth/login
+                icon: /assets/immich.png
+              - title: Pi-hole
+                url: https://pihole.${DOMAIN}/admin/login
+                icon: /assets/pihole.png
+              - title: Pocket-ID
+                url: https://id.${DOMAIN}
+                icon: /assets/pocket-id.png
+
+          - type: group
+            widgets:
+              - type: hacker-news
+              - type: reddit
+                subreddit: selfhosted
+                show-thumbnails: true
+
+      - size: small
+        widgets:
+          - type: calendar
+            first-day-of-week: sunday
+
+          - type: weather
+            location: Olathe, Kansas, United States
+            units: imperial # alternatively "imperial"
+            hour-format: 12h # alternatively "24h"
+            # Optionally hide the location from being displayed in the widget
+            # hide-location: true
+
+          - type: markets
+            markets:
+              - symbol: SPY
+                name: S&P 500
+              - symbol: AAPL
+                name: Apple
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: ETH-USD
+                name: Ethereum
+

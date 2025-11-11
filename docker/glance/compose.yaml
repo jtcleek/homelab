@@ -1,0 +1,14 @@
+services:
+  glance:
+    container_name: glance
+    image: glanceapp/glance
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config
+      - ./assets:/app/assets
+    ports:
+      - 8080:8080
+    environment:
+      DOMAIN: ${GLANCE_DOMAIN}
+      SPEEDTEST_URL: ${GLANCE_SPEEDTEST_URL}
+      SPEEDTEST_TRACKER_API_TOKEN: ${GLANCE_SPEEDTEST_API_TOKEN}
