@@ -1,0 +1,15 @@
+---
+name: mealie
+working_dir: docker/mealie
+external_secrets:
+  MEALIE_URL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/URL"
+  MEALIE_EMAIL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/EMAIL"
+  MEALIE_SMTP_PASS: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/SMTP_PASS"
+  MEALIE_OIDC_URL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/OIDC_URL"
+  MEALIE_OIDC_ID: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/OIDC_ID"
+  MEALIE_OIDC_SECRET: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/OIDC_SECRET"
+---
+name: atuin
+working_dir: docker/atuin
+external_secrets:
+  ATUIN_PASSWORD: "arn:aws:secretsmanager:us-east-1:913105552974:secret:atuin-vDJG5l/PASSWORD"
