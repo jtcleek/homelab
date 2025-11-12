@@ -4,13 +4,12 @@ services:
     container_name: mealie
     restart: always
     ports:
-      - 9925:9000
+      - 127.0.0.1:9925:9000
     deploy:
       resources:
         limits:
           memory: 1000M
     volumes:
       - data:/app/data/
-    env_file: .env
 volumes:
   data:
