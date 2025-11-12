@@ -19,7 +19,7 @@ jobs:
         run: |
           for f in docker/*/compose*.yml; do
             echo "Linting $f"
-            docker-compose -f "$f" config
+            docker compose -f "$f" config
           done
 
   build-images:
