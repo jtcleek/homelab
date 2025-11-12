@@ -28,5 +28,5 @@ jobs:
         run: |
           for f in docker/*/compose*.yml; do
             echo "Building images for $f"
-            docker-compose -f "$f" build
+            docker compose -f "$f" build
           done
