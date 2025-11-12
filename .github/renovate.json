@@ -40,6 +40,17 @@
         "ghcr.io/immich-app/postgres"
       ],
       "enabled": false
+    },
+    {
+      "description": "Ignore dependencies in atuin stack",
+      "matchManagers": [
+        "docker-compose"
+      ],
+      "matchFileNames": ["**/docker/atuin/compose.yml"],
+      "matchPackageNames": [
+        "postgres"
+      ],
+      "enabled": false
     }
   ]
 }
