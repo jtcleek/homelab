@@ -24,6 +24,10 @@
       "automerge": true
     },
     {
+      "matchPackageNames": ["lscr.io/linuxserver/speedtest-tracker"],
+      "versioning": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-ls(?<revision>\\d+)$"
+    },
+    {
       "description": "Ignore dependencies in immich stack",
       "matchManagers": [
         "docker-compose"
