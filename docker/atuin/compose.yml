@@ -1,6 +1,6 @@
 services:
   atuin:
-    image: ghcr.io/atuinsh/atuin:v18.6.1
+    image: ghcr.io/atuinsh/atuin:v18.6.1@sha256:869a85bcc169ae9a3ea65dcf32a99dae982d28d8562172e2712d3313d7349203
     container_name: atuin-server
     restart: always
     ports:
@@ -14,7 +14,7 @@ services:
       RUST_LOG: info,atuin_server=debug
     command: server start
   postgresql:
-    image: postgres:14
+    image: postgres:14@sha256:962ffbe9f6418387643411b127c1db27465e5a23b9a8849bfaf45fa6323963ce
     container_name: atuin-database
     restart: unless-stopped
     volumes: # Don't remove permanent storage for index database files!
