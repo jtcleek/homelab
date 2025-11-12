@@ -12,9 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install docker-compose-linter
-        run: sudo apt-get update && sudo apt-get install -y docker-compose
-
       - name: Lint all compose files
         run: |
           for f in docker/*/compose*.yml; do
