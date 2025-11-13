@@ -13,3 +13,6 @@ name: atuin
 working_dir: docker/atuin
 external_secrets:
   ATUIN_PASSWORD: "arn:aws:secretsmanager:us-east-1:913105552974:secret:atuin-vDJG5l/PASSWORD"
+---
+name: uptime-kuma
+working_dir: docker/uptime-kuma
