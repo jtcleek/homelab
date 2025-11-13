@@ -24,7 +24,7 @@ services:
       - --remote-debugging-port=9222
       - --hide-scrollbars
   meilisearch:
-    image: docker.io/getmeili/meilisearch:v1.13.3@sha256:d9a19a8c8950ddcee82d458107e0f9c58971adb8fa741d09f208d7f1846b7834
+    image: docker.io/getmeili/meilisearch:v1.13.3@sha256:bed3fb650e62da53145777204891159242f6ea4ce69e215b36223af4aa64a0ae
     restart: unless-stopped
     env_file:
       - .env
