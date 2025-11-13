@@ -12,5 +12,6 @@ services:
       PGID: 1000
       APP_KEY: ${SPEEDTEST_APP_KEY}
       DB_CONNECTION: sqlite
+      SPEEDTEST_SCHEDULE: 6 */2 * * *
 volumes:
   data:
