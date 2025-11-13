@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     volumes:
       - data:/app/data
+      - $XDG_RUNTIME_DIR/docker.sock:/var/run/docker.sock
     ports:
       - "127.0.0.1:3001:3001"
 volumes:
