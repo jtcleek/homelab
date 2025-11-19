@@ -1,0 +1,14 @@
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:latest
+    volumes:
+      - ./certs:/certs
+      - /run/user/1000/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - 8888:8080
+    environment:
+      - DOZZLE_REMOTE_AGENT=${DOZZLE_AGENT}
+      - DOZZLE_CERT=/certs/cert.enc.pem
+      - DOZZLE_KEY=/certs/key.enc.pem
+      - DOZZLE_NO_ANALYTICS=true

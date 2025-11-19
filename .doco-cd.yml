@@ -10,3 +10,8 @@ name: speedtest
 working_dir: docker/speedtest
 external_secrets:
   SPEEDTEST_APP_KEY: "arn:aws:secretsmanager:us-east-1:913105552974:secret:speedtest-G92iOW/APP_KEY"
+---
+name: dozzle
+working_dir: docker/dozzle
+external_secrets:
+  DOZZLE_AGENT: "arn:aws:secretsmanager:us-east-1:913105552974:secret:dozzle-OzJnwq/AGENT"
