@@ -17,12 +17,10 @@ pages:
             # read-only token from your Github account settings and use it here to increase the limit.
             # token: ...
             repositories:
-              - glanceapp/glance
+              - amir20/dozzle
               - immich-app/immich
               - moghtech/komodo
               - babybuddy/babybuddy
-              - mealie-recipes/mealie
-              - atuinsh/atuin
               - juanfont/headscale
 
           - type: bookmarks
