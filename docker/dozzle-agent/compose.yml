@@ -12,3 +12,4 @@ services:
       - DOZZLE_CERT=/certs/cert.enc.pem
       - DOZZLE_KEY=/certs/key.enc.pem
       - DOZZLE_NO_ANALYTICS=true
+      - DOZZLE_HOSTNAME=chicago
