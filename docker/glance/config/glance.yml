@@ -26,6 +26,9 @@ pages:
           - type: bookmarks
             groups:
               - links:
+                  - title: GitHub - jtcleek
+                    url: https://github.com/jtcleek
+              - links:
                   - title: Alertmanager
                     url: https://alertmanager.${DOMAIN}/#/alerts
                   - title: Prometheus
