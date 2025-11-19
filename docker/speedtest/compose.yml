@@ -4,7 +4,7 @@ services:
     restart: unless-stopped
     container_name: speedtest
     ports:
-      - 8443:443
+      - 127.0.0.1:8443:443
     volumes:
       - data:/config
     environment:
