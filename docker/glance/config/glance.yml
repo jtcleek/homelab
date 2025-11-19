@@ -17,6 +17,7 @@ pages:
             # read-only token from your Github account settings and use it here to increase the limit.
             # token: ...
             repositories:
+              - kimdre/doco-cd
               - amir20/dozzle
               - immich-app/immich
               - moghtech/komodo
