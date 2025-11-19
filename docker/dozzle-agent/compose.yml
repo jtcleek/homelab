@@ -5,10 +5,10 @@ services:
     command: agent
     volumes:
       - $XDG_RUNTIME_DIR/docker.sock:/var/run/docker.sock:ro
-      #- ./certs:/certs
+      - ./certs:/certs
     ports:
-      - 127.0.0.1:7007:7007
+      - 7007:7007
     environment:
-      #- DOZZLE_CERT=/certs/cert.pem
-      #- DOZZLE_KEY=/certs/key.pem
+      - DOZZLE_CERT=/certs/cert.enc.pem
+      - DOZZLE_KEY=/certs/key.enc.pem
       - DOZZLE_NO_ANALYTICS=true
