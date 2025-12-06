@@ -63,9 +63,6 @@ pages:
               - title: Immich
                 url: https://immich.${DOMAIN}/auth/login
                 icon: /assets/immich.png
-              - title: Pi-hole
-                url: https://pihole.${DOMAIN}/admin/login
-                icon: /assets/pihole.png
               - title: Pocket-ID
                 url: https://id.${DOMAIN}
                 icon: /assets/pocket-id.png
