@@ -34,7 +34,7 @@
       "matchManagers": [
         "docker-compose"
       ],
-      "matchFileNames": ["**/immich/compose.yaml"],
+      "matchFileNames": ["**/docker/immich/compose.yml"],
       "matchPackageNames": [
         "docker.io/valkey/valkey",
         "ghcr.io/immich-app/postgres"
