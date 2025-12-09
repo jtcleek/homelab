@@ -9,3 +9,5 @@ working_dir: docker/tailnet
 ---
 name: dozzle
 working_dir: docker/dozzle-agent
+env_files:
+  - private.enc.env

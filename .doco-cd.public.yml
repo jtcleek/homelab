@@ -30,3 +30,5 @@ external_secrets:
 ---
 name: dozzle
 working_dir: docker/dozzle-agent
+env_files:
+  - public.enc.env
