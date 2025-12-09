@@ -8,5 +8,9 @@ services:
       - ./certs:/certs
     ports:
       - 7007:7007
-    env_file:
-      - ${HOSTNAME}.enc.env
+    environment:
+      - DOZZLE_CERT=${DOZZLE_CERT}
+      - DOZZLE_KEY=${DOZZLE_KEY}
+      - DOZZLE_NO_ANALYTICS=${DOZZLE_NO_ANALYTICS}
+      - DOZZLE_HOSTNAME=${DOZZLE_HOSTNAME}
+      - DOZZLE_DOCKER_SOCK=${DOZZLE_DOCKER_SOCK}
