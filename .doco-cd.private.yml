@@ -3,3 +3,6 @@ name: pocket-id
 working_dir: docker/pocket-id
 env_files:
   - secrets.enc.env
+---
+name: tailnet
+working_dir: docker/tailnet
