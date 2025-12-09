@@ -4,12 +4,9 @@ services:
     container_name: dozzle-agent
     command: agent
     volumes:
-      - /run/user/1000/docker.sock:/var/run/docker.sock:ro
+      - ${DOZZLE_DOCKER_SOCK:-/var/run/docker.sock}:/var/run/docker.sock:ro
       - ./certs:/certs
     ports:
       - 7007:7007
-    environment:
-      - DOZZLE_CERT=/certs/cert.enc.pem
-      - DOZZLE_KEY=/certs/key.enc.pem
-      - DOZZLE_NO_ANALYTICS=true
-      - DOZZLE_HOSTNAME=chicago
+    env_files:
+      - ${HOSTNAME}.enc.env

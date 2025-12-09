@@ -6,3 +6,6 @@ env_files:
 ---
 name: tailnet
 working_dir: docker/tailnet
+---
+name: dozzle
+working_dir: docker/dozzle-agent
