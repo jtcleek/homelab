@@ -8,5 +8,5 @@ services:
       - ./certs:/certs
     ports:
       - 7007:7007
-    env_files:
+    env_file:
       - ${HOSTNAME}.enc.env
