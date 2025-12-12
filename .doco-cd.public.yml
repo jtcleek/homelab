@@ -32,3 +32,6 @@ name: dozzle
 working_dir: docker/dozzle-agent
 env_files:
   - public.enc.env
+---
+name: it-tools
+working_dir: docker/it-tools
