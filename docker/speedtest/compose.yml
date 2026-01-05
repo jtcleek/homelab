@@ -13,5 +13,6 @@ services:
       APP_KEY: ${SPEEDTEST_APP_KEY}
       DB_CONNECTION: sqlite
       SPEEDTEST_SCHEDULE: 6 */2 * * *
+      SPEEDTEST_EXTERNAL_IP_URL: https://api.ipify.org/
 volumes:
   data:
