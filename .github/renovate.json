@@ -11,6 +11,11 @@
   "configMigration": true,
   "prHourlyLimit": 0,
   "pruneStaleBranches": true,
+  "kubernetes": {
+    "managerFilePatterns": [
+      "/k3s/.+\\.ya?ml$/"
+    ]
+  },
   "packageRules": [
     {
       "description": "Automerge non-major, non-minor updates",
