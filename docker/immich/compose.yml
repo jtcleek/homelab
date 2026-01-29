@@ -1,6 +1,6 @@
 services:
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v2.4.1@sha256:e6a6298e67ae077808fdb7d8d5565955f60b0708191576143fc02d30ab1389d1
+    image: ghcr.io/immich-app/immich-server:v2.5.2@sha256:8ac5a6d471fbb6fcfec6bc34854dd5a947c1795547f0d9345d9bf1803d1209e3
     container_name: immich_server
     deploy:
       resources:
@@ -26,7 +26,7 @@ services:
     healthcheck:
       disable: false
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:v2.4.1-cuda@sha256:39688058f063d2ff0a0789b5b2e6b723f60124f99004b662955ad71d14b855ad
+    image: ghcr.io/immich-app/immich-machine-learning:v2.5.2-cuda@sha256:20e07a4fbabce7b3e9cb93cc6423654a6ed77b87b1cbf3843a0f049e3ec70d3d
     container_name: immich_machine_learning
     deploy:
       resources:
