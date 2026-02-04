@@ -6,11 +6,6 @@ external_secrets:
   GLANCE_SPEEDTEST_URL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:glance-jxmiOS/SPEEDTEST_URL"
   GLANCE_SPEEDTEST_API_TOKEN: "arn:aws:secretsmanager:us-east-1:913105552974:secret:glance-jxmiOS/SPEEDTEST_API_TOKEN"
 ---
-name: speedtest
-working_dir: docker/speedtest
-external_secrets:
-  SPEEDTEST_APP_KEY: "arn:aws:secretsmanager:us-east-1:913105552974:secret:speedtest-G92iOW/APP_KEY"
----
 name: dozzle
 working_dir: docker/dozzle
 external_secrets:
