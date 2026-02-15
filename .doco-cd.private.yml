@@ -4,8 +4,8 @@ working_dir: docker/pocket-id
 env_files:
   - secrets.enc.env
 ---
-name: tailnet
-working_dir: docker/tailnet
+name: headscale
+working_dir: docker/headscale
 ---
 name: dozzle
 working_dir: docker/dozzle-agent
