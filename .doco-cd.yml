@@ -10,3 +10,6 @@ name: dozzle
 working_dir: docker/dozzle
 external_secrets:
   DOZZLE_AGENT: "arn:aws:secretsmanager:us-east-1:913105552974:secret:dozzle-OzJnwq/AGENT"
+---
+name: babybuddy
+working_dir: docker/babybuddy
