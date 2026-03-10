@@ -1,32 +1,17 @@
 ---
 name: mealie
 working_dir: docker/mealie
-external_secrets:
-  MEALIE_URL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/URL"
-  MEALIE_EMAIL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/EMAIL"
-  MEALIE_SMTP_PASS: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/SMTP_PASS"
-  MEALIE_OIDC_URL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/OIDC_URL"
-  MEALIE_OIDC_ID: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/OIDC_ID"
-  MEALIE_OIDC_SECRET: "arn:aws:secretsmanager:us-east-1:913105552974:secret:mealie-hwGLDg/OIDC_SECRET"
 ---
 name: atuin
 working_dir: docker/atuin
-external_secrets:
-  ATUIN_PASSWORD: "arn:aws:secretsmanager:us-east-1:913105552974:secret:atuin-vDJG5l/PASSWORD"
+env_files:
+  - secrets.enc.env
 ---
 name: uptime-kuma
 working_dir: docker/uptime-kuma
 ---
 name: karakeep
 working_dir: docker/karakeep
-external_secrets:
-  KARAKEEP_URL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:karakeep-LcgJ2k/URL"
-  KARAKEEP_SECRET: "arn:aws:secretsmanager:us-east-1:913105552974:secret:karakeep-LcgJ2k/SECRET"
-  KARAKEEP_MASTER_KEY: "arn:aws:secretsmanager:us-east-1:913105552974:secret:karakeep-LcgJ2k/MASTER_KEY"
-  KARAKEEP_API_KEY: "arn:aws:secretsmanager:us-east-1:913105552974:secret:karakeep-LcgJ2k/API_KEY"
-  KARAKEEP_WELLKNOWN_URL: "arn:aws:secretsmanager:us-east-1:913105552974:secret:karakeep-LcgJ2k/WELLKNOWN_URL"
-  KARAKEEP_CLIENT_SECRET: "arn:aws:secretsmanager:us-east-1:913105552974:secret:karakeep-LcgJ2k/CLIENT_SECRET"
-  KARAKEEP_CLIENT_ID: "arn:aws:secretsmanager:us-east-1:913105552974:secret:karakeep-LcgJ2k/CLIENT_ID"
 ---
 name: dozzle
 working_dir: docker/dozzle-agent

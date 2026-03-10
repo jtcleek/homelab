@@ -7,8 +7,5 @@ services:
       - /run/user/1000/docker.sock:/var/run/docker.sock:ro
     ports:
       - 127.0.0.1:8888:8080
-    environment:
-      - DOZZLE_REMOTE_AGENT=${DOZZLE_AGENT}
-      - DOZZLE_CERT=/certs/cert.enc.pem
-      - DOZZLE_KEY=/certs/key.enc.pem
-      - DOZZLE_NO_ANALYTICS=true
+    env_file:
+      - secrets.enc.env
