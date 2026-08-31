@@ -1,6 +1,6 @@
 services:
   babybuddy:
-    image: lscr.io/linuxserver/babybuddy:2.8.0@sha256:81ffeb763cbcb9f8b9807abca05e5c46170bd2777a88f441ec35b79b3e6dc813
+    image: lscr.io/linuxserver/babybuddy:2.10.0@sha256:f456fcd85e6ccead3f6697c6561e3494d4075bcf9322a34d6810091c8a339bae
     container_name: babybuddy
     ports:
       - "127.0.0.1:8000:8000"
