@@ -1,7 +1,7 @@
 services:
   dozzle:
     container_name: dozzle
-    image: docker.io/amir20/dozzle:v10.3.3@sha256:6f197ca152bd8c4ee1ba32b64f7834059d67365a6656bc963a6bfbb4623ccf1f
+    image: docker.io/amir20/dozzle:v10.9.2@sha256:1124fe771e2d31e18db8064e93e7eb24d436f92634abdedeca47cb4eb2c9b991
     volumes:
       - ./certs:/certs
       - /run/user/1000/docker.sock:/var/run/docker.sock:ro
