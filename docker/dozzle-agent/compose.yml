@@ -1,6 +1,6 @@
 services:
   dozzle-agent:
-    image: docker.io/amir20/dozzle:v10.3.3@sha256:6f197ca152bd8c4ee1ba32b64f7834059d67365a6656bc963a6bfbb4623ccf1f
+    image: docker.io/amir20/dozzle:v11.1.0@sha256:7c4fb7f8124f5dea15ade881535cc19cc9a03e66639fd28154ff43a93b78944b
     container_name: dozzle-agent
     restart: unless-stopped
     command: agent
