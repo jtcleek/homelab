@@ -1,7 +1,7 @@
 services:
   atuin:
     container_name: atuin-server
-    image: ghcr.io/atuinsh/atuin:v18.12.0@sha256:e953fa9e36ef571d3cb2f9746426129025b8101ad4b88cd0da6783d524cca431
+    image: ghcr.io/atuinsh/atuin:18.23.0@sha256:f232feeead54a0a13132b9cd477e312c3380e9dc90f1db24c4f79ce6c8e034ea
     command: start
     restart: always
     ports:
