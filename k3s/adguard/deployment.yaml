@@ -17,7 +17,7 @@ spec:
         fsGroup: 1000
       containers:
       - name: adguard-home
-        image: adguard/adguardhome:v0.107.71@sha256:92929135ced2554aaf94706f766a98ad348f211df61b0704e2db7e8498cc00b7
+        image: adguard/adguardhome:v0.107.79@sha256:aba9e3bf0613be3ba3755e1fc311b126e2c24bec25e18b6483894a88283074f0
         ports:
         - containerPort: 53
           name: dns-udp
