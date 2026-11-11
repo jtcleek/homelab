@@ -1,13 +1,19 @@
 ---
 name: pocket-id
 working_dir: docker/pocket-id
+webhook_filter: '^refs/heads/main$'
+reference: main
 env_files:
   - secrets.enc.env
 ---
 name: headscale
 working_dir: docker/headscale
+webhook_filter: '^refs/heads/main$'
+reference: main
 ---
 name: dozzle
 working_dir: docker/dozzle-agent
+webhook_filter: '^refs/heads/main$'
+reference: main
 env_files:
   - private.enc.env
