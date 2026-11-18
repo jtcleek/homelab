@@ -3,7 +3,9 @@
   "extends": [
     "config:best-practices"
   ],
-  "dependencyDashboardTitle": "Renovate Dashboard",
+  "dependencyDashboard": {
+    "title": "Renovate Dashboard"
+  },
   "dependencyDashboardApproval": false,
   "labels": [
     "renovate"
